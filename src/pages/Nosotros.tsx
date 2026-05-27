@@ -154,7 +154,7 @@ const Nosotros = () => {
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <img 
                   src={nosotrosMision} 
-                  alt="Equipo trabajando en DCA" 
+                  alt="Equipo Sevilla Rodríguez en obra" 
                   className="w-full h-[420px] object-cover"
                 />
               </div>
@@ -169,10 +169,9 @@ const Nosotros = () => {
                     <Target className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-foreground mb-3">Nuestra Misión</h3>
+                    <h3 className="text-xl font-bold text-foreground mb-3">Misión</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Brindar soluciones de ingeniería y construcción que <strong className="text-foreground">superen las expectativas del mercado</strong>, 
-                      garantizando la seguridad operacional, la calidad técnica y el respeto absoluto por el medio ambiente en cada intervención.
+                      Ejecutar <strong className="text-foreground">proyectos especiales de construcción</strong> a nivel nacional, utilizando las mejores prácticas en la gerencia de proyectos y brindando a nuestros clientes soluciones eficientes que generen valor a accionistas, trabajadores y comunidades.
                     </p>
                   </div>
                 </div>
@@ -185,10 +184,9 @@ const Nosotros = () => {
                     <Eye className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-foreground mb-3">Nuestra Visión</h3>
+                    <h3 className="text-xl font-bold text-foreground mb-3">Visión</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Consolidarnos como el <strong className="text-foreground">socio estratégico líder</strong> en gestión de proyectos en el Perú, 
-                      reconocidos por nuestra capacidad de respuesta, innovación en procesos y ética profesional inquebrantable.
+                      Ser la <strong className="text-foreground">empresa líder</strong> en la construcción de proyectos no convencionales y de diseño específico en el país.
                     </p>
                   </div>
                 </div>
