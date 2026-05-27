@@ -7,7 +7,7 @@ const navItems = [
   { label: "Inicio", href: "/", isRoute: true },
   { label: "Nosotros", href: "/nosotros", isRoute: true },
   { label: "Servicios", href: "/servicios", isRoute: true },
-  { label: "Proyectos", href: "/#proyectos", isRoute: false },
+  { label: "Proyectos", href: "/proyectos", isRoute: true },
   { label: "Clientes", href: "/#clientes", isRoute: false },
   { label: "Contacto", href: "/#contacto", isRoute: false },
 ];
@@ -44,11 +44,12 @@ export const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="p-2 bg-primary rounded-lg group-hover:bg-primary-light transition-colors">
-              <Building2 className="h-6 w-6 text-primary-foreground" />
+            <div className="px-3 py-2 bg-primary rounded-lg group-hover:bg-primary-light transition-colors">
+              <span className="text-primary-foreground font-extrabold text-lg tracking-tight">SR</span>
             </div>
-            <span className="text-xl font-bold text-foreground tracking-tight">
-              DCA <span className="text-primary">INGENIEROS</span>
+            <span className="text-base md:text-lg font-bold text-foreground tracking-tight leading-tight">
+              Sevilla<span className="text-primary">|</span>Rodríguez
+              <span className="block text-[10px] font-medium text-muted-foreground tracking-widest uppercase">Development</span>
             </span>
           </Link>
 

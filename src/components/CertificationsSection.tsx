@@ -1,23 +1,11 @@
-import { Shield, Leaf, HardHat, CheckCircle } from "lucide-react";
+import { Shield, CheckCircle } from "lucide-react";
 
 const certifications = [
   {
     icon: Shield,
-    title: "ISO 9001",
+    title: "ISO 9001:2015",
     subtitle: "Calidad",
-    description: "Sistema de Gestión de Calidad",
-  },
-  {
-    icon: Leaf,
-    title: "ISO 14001",
-    subtitle: "Medio Ambiente",
-    description: "Sistema de Gestión Ambiental",
-  },
-  {
-    icon: HardHat,
-    title: "ISO 45001",
-    subtitle: "Seguridad",
-    description: "Sistema de Gestión de SST",
+    description: "Sistema de Gestión de la Calidad certificado para nuestros procesos constructivos.",
   },
 ];
 
@@ -33,14 +21,14 @@ export const CertificationsSection = () => {
             </span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-            Calidad y Seguridad Certificada
+            Calidad Certificada Internacionalmente
           </h2>
           <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
-            Empresa homologada con estándares internacionales.
+            Operamos bajo un sistema de gestión alineado a estándares ISO.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-1 gap-8 max-w-md mx-auto">
           {certifications.map((cert, index) => (
             <div
               key={index}
@@ -64,7 +52,7 @@ export const CertificationsSection = () => {
           <div className="inline-flex items-center gap-3 px-6 py-3 bg-primary-foreground/10 rounded-full border border-primary-foreground/20">
             <Shield className="h-5 w-5 text-accent-light" />
             <span className="text-primary-foreground font-medium">
-              Certificación Trinorma Vigente
+              Empresa Certificada · Vigente
             </span>
           </div>
         </div>

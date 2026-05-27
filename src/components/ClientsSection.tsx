@@ -1,10 +1,22 @@
 const clients = [
-  { name: "PROSEGUR" },
-  { name: "SENATI" },
-  { name: "GRUPO ATV" },
-  { name: "CAD&LAN" },
-  { name: "BANCO DE LA NACIÓN" },
-  { name: "SAN FERNANDO" },
+  { name: "EFCO" },
+  { name: "El Comercio" },
+  { name: "El Brocal" },
+  { name: "Ferreyros CAT" },
+  { name: "Min. de Educación" },
+  { name: "Trébol" },
+  { name: "Metro de Lima L2" },
+  { name: "cbc" },
+  { name: "Celima" },
+  { name: "PUCP" },
+  { name: "UNACEM" },
+  { name: "AmBev" },
+  { name: "3M" },
+  { name: "CasaBlanca" },
+  { name: "FOVIMFAP" },
+  { name: "INDUPARK" },
+  { name: "pbf" },
+  { name: "SENASA" },
 ];
 
 export const ClientsSection = () => {
