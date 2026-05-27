@@ -27,40 +27,40 @@ const valores = [
   {
     icon: Award,
     title: "Calidad Certificada",
-    description: "Nuestros procesos están alineados con estándares internacionales, garantizando durabilidad y excelencia en los acabados."
+    description: "Procesos alineados a la norma ISO 9001:2015, garantizando durabilidad y excelencia técnica en cada obra."
   },
   {
     icon: Clock,
     title: "Cumplimiento y Puntualidad",
-    description: "Entendemos el valor del tiempo en su negocio. Nuestro compromiso es la entrega oportuna sin sacrificar calidad."
+    description: "Gestionamos los riesgos propios de proyectos especiales para entregar a tiempo, sin sacrificar la calidad pactada."
   },
   {
     icon: Leaf,
-    title: "Innovación Sostenible",
-    description: "Implementamos tecnologías y métodos constructivos que optimizan recursos y reducen el impacto ambiental."
+    title: "Desarrollo Sostenible",
+    description: "Generamos valor a accionistas, bienestar a trabajadores y desarrollo a las comunidades donde ejecutamos nuestras obras."
   }
 ];
 
 const hitos = [
   {
-    year: "2020",
+    year: "1994",
     title: "El Inicio",
-    description: "Fundación de DCA INGENIEROS con el objetivo de elevar el estándar en servicios generales y remodelaciones."
+    description: "En marzo nace Sevilla|Rodríguez con una Oficina de Gestión de Proyectos y personal técnico en obra."
   },
   {
-    year: "2021",
-    title: "Expansión",
-    description: "Ampliación de nuestra cartera a proyectos industriales y retail de gran envergadura."
+    year: "2003",
+    title: "Expansión Industrial",
+    description: "Ampliamos cartera hacia plantas industriales para producción y almacenamiento a nivel nacional."
   },
   {
-    year: "2023",
+    year: "2012",
     title: "Consolidación",
-    description: "Implementación de sistemas de gestión integrados y obtención de homologaciones con clientes corporativos de primer nivel."
+    description: "Homologación con clientes corporativos de primer nivel y participación en obras de minería, saneamiento e infraestructura deportiva."
   },
   {
     year: "2024",
     title: "Actualidad",
-    description: "Gestión de proyectos con certificación Trinorma (ISO 9001, 14001, 45001) y presencia en proyectos nacionales."
+    description: "Más de 30 años brindando respuestas simples a retos complejos en todo el Perú."
   }
 ];
 
