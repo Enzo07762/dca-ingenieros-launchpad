@@ -1,29 +1,17 @@
-import { Building, Hammer, Wrench, Settings } from "lucide-react";
+import { ClipboardList, HardHat } from "lucide-react";
 
 const services = [
   {
-    icon: Building,
-    title: "Ingeniería y Construcción",
+    icon: ClipboardList,
+    title: "Gerencia de Proyectos",
     description:
-      "Diseño, Gerencia de Proyectos y Construcción para sectores Retail, Industrial y Oficinas.",
+      "Acompañamiento desde la concepción de la idea: esquemas preliminares, evaluación de materiales, presupuesto y WBS junto al cliente.",
   },
   {
-    icon: Hammer,
-    title: "Remodelaciones",
+    icon: HardHat,
+    title: "Ejecución de Obras",
     description:
-      "Implementaciones integrales para el sector Inmobiliario, Industrial e Institucional.",
-  },
-  {
-    icon: Wrench,
-    title: "Mantenimiento",
-    description:
-      "Servicios preventivos y correctivos para Oficinas, Inmobiliarios y Retail.",
-  },
-  {
-    icon: Settings,
-    title: "Servicios Generales",
-    description:
-      "Instalaciones eléctricas, sanitarias, drywall, pintura y cableado estructurado.",
+      "Planeamiento, ejecución y control de procesos constructivos para proyectos especiales en industria, minería, saneamiento, viales y edificaciones.",
   },
 ];
 
@@ -47,7 +35,7 @@ export const ServicesSection = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {services.map((service, index) => (
             <div
               key={index}

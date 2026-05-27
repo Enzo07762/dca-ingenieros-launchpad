@@ -1,18 +1,18 @@
-import { CheckCircle2, Award, Users, Clock } from "lucide-react";
+import { CheckCircle2, Briefcase, Users, Clock } from "lucide-react";
 import aboutImage from "@/assets/about-team.jpg";
 
 const features = [
   {
-    icon: Award,
-    text: "Certificación Trinorma (ISO 9001, 14001, 45001)",
+    icon: Briefcase,
+    text: "Oficina de Gestión de Proyectos (PMO) propia",
   },
   {
     icon: Users,
-    text: "Profesionales altamente calificados",
+    text: "Equipo técnico altamente calificado en obra",
   },
   {
     icon: Clock,
-    text: "Cumplimiento estricto de plazos",
+    text: "Trayectoria comprobada desde 1994",
   },
 ];
 
@@ -27,14 +27,14 @@ export const AboutSection = () => {
               Sobre Nosotros
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
-              Excelencia en Gestión{" "}
-              <span className="text-primary">Integral de Proyectos</span>
+              Una constructora con{" "}
+              <span className="text-primary">prestigio y propósito</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              DCA INGENIEROS es una empresa dedicada a la gestión integral de
-              proyectos de ingeniería, abarcando diseño, construcción y
-              mantenimiento. Nos respaldan profesionales con amplia experiencia,
-              comprometidos con la calidad, seguridad y cumplimiento de plazos.
+              Sevilla|Rodríguez Development es una empresa peruana de construcción
+              fundada en marzo de 1994. Edificamos obras de diseño único en sectores
+              como comercio, salud, educación, infraestructura deportiva, vivienda y,
+              especialmente, plantas industriales para producción y almacenamiento.
             </p>
 
             {/* Features */}
@@ -73,7 +73,7 @@ export const AboutSection = () => {
                   <CheckCircle2 className="h-8 w-8 text-accent-foreground" />
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-foreground">4+</div>
+                  <div className="text-2xl font-bold text-foreground">30+</div>
                   <div className="text-sm text-muted-foreground">
                     Años de Experiencia
                   </div>
