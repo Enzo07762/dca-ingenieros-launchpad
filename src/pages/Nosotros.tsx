@@ -78,21 +78,21 @@ const Nosotros = () => {
           <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-full mb-8 animate-fade-in">
             <BadgeCheck className="w-4 h-4 text-accent-light" />
             <span className="text-sm font-medium text-primary-foreground">
-              +4 Años de Excelencia en el Mercado Peruano
+              Empresa peruana desde marzo de 1994
             </span>
           </div>
           
           {/* Main Title */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 animate-slide-up leading-tight">
-            Ingeniería con Propósito.
+            Nuestra Historia.
             <br />
-            <span className="text-accent-light">Construcción con Futuro.</span>
+            <span className="text-accent-light">Construyendo el Perú desde 1994.</span>
           </h1>
           
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-primary-foreground/80 max-w-3xl mx-auto animate-slide-up" style={{ animationDelay: '0.1s' }}>
-            Transformamos espacios y materializamos proyectos integrales bajo los más altos estándares de 
-            <strong className="text-primary-foreground"> calidad, seguridad y sostenibilidad.</strong>
+            Sevilla|Rodríguez Development es una empresa orgullosa de ser peruana, creada con la motivación de
+            <strong className="text-primary-foreground"> marcar la diferencia en el sector de la construcción.</strong>
           </p>
         </div>
       </section>
@@ -107,17 +107,17 @@ const Nosotros = () => {
                 ¿Quiénes Somos?
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Gestión Integral Sin Fisuras
+                El mejor talento humano en obra
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                En <strong className="text-foreground">DCA INGENIEROS</strong>, no solo construimos estructuras; 
-                <strong className="text-foreground"> gestionamos soluciones</strong>. Nos especializamos en la ejecución integral 
-                de proyectos de ingeniería, desde el diseño conceptual hasta la construcción y el mantenimiento post-entrega.
+                Desde el inicio de las operaciones, <strong className="text-foreground">Sevilla|Rodríguez</strong> se esfuerza
+                por reclutar el mejor talento humano, logrando un equipo de profesionales con dominio técnico
+                altamente comprometido con nuestros principios y las necesidades de nuestros clientes.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Nuestro enfoque combina la <strong className="text-foreground">precisión técnica</strong> con una gestión eficiente 
-                de recursos, asegurando que cada proyecto —ya sea retail, industrial o corporativo— cumpla estrictamente 
-                con los <strong className="text-foreground">plazos y presupuestos pactados</strong>.
+                Nuestra experiencia sigue creciendo gracias a la edificación de obras de diseño único en
+                <strong className="text-foreground"> comercio, salud, educación, infraestructura deportiva, vivienda</strong> y
+                especialmente <strong className="text-foreground">plantas industriales</strong> para producción y almacenamiento.
               </p>
             </div>
             
@@ -126,7 +126,7 @@ const Nosotros = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
                 <img 
                   src={nosotrosTeam} 
-                  alt="Equipo DCA Ingenieros" 
+                  alt="Equipo Sevilla Rodríguez Development" 
                   className="w-full h-[400px] object-cover"
                 />
               </div>
@@ -136,8 +136,8 @@ const Nosotros = () => {
                   <CheckCircle className="w-5 h-5 text-accent-light" />
                 </div>
                 <div>
-                  <p className="font-semibold text-sm">Certificación Trinorma</p>
-                  <p className="text-xs text-primary-foreground/80">ISO 9001 | 14001 | 45001</p>
+                  <p className="font-semibold text-sm">Certificación de Calidad</p>
+                  <p className="text-xs text-primary-foreground/80">ISO 9001:2015</p>
                 </div>
               </div>
             </div>
@@ -286,8 +286,8 @@ const Nosotros = () => {
                 Respaldo que genera confianza
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                Operamos bajo un <strong className="text-foreground">Sistema de Gestión Integrado</strong>, 
-                cumpliendo con las normativas internacionales más exigentes:
+                Nuestros procesos están alineados a estándares internacionales de calidad,
+                garantizando excelencia en cada entrega:
               </p>
               
               <div className="space-y-4">
@@ -296,28 +296,17 @@ const Nosotros = () => {
                     <CheckCircle className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground">ISO 9001</p>
+                    <p className="font-semibold text-foreground">ISO 9001:2015</p>
                     <p className="text-sm text-muted-foreground">Sistema de Gestión de Calidad</p>
                   </div>
                 </div>
-                
                 <div className="flex items-center gap-4 p-4 bg-card rounded-xl border border-border">
                   <div className="p-2 bg-accent/10 rounded-lg">
                     <CheckCircle className="w-5 h-5 text-accent" />
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground">ISO 14001</p>
-                    <p className="text-sm text-muted-foreground">Sistema de Gestión Ambiental</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-4 p-4 bg-card rounded-xl border border-border">
-                  <div className="p-2 bg-primary/10 rounded-lg">
-                    <CheckCircle className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-foreground">ISO 45001</p>
-                    <p className="text-sm text-muted-foreground">Sistema de Gestión de Seguridad y Salud</p>
+                    <p className="font-semibold text-foreground">+30 años de trayectoria</p>
+                    <p className="text-sm text-muted-foreground">Empresa peruana fundada en 1994</p>
                   </div>
                 </div>
               </div>
@@ -328,7 +317,7 @@ const Nosotros = () => {
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <img 
                   src={nosotrosHero} 
-                  alt="Proyecto de construcción DCA" 
+                  alt="Proyecto de construcción Sevilla Rodríguez" 
                   className="w-full h-[400px] object-cover"
                 />
               </div>
