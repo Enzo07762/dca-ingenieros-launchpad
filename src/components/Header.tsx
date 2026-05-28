@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Building2, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navItems = [
   { label: "Inicio", href: "/", isRoute: true },
@@ -18,52 +18,45 @@ export const Header = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const onScroll = () => setIsScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const isActive = (href: string, isRoute: boolean) => {
-    if (isRoute) {
-      return location.pathname === href;
-    }
-    return false;
-  };
+  const isActive = (href: string, isRoute: boolean) =>
+    isRoute ? location.pathname === href : false;
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-md"
-          : "bg-background"
+        isScrolled ? "bg-background/95 backdrop-blur-md shadow-md" : "bg-background"
       }`}
     >
       <div className="section-container">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
+          {/* Logo A&C */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="px-3 py-2 bg-primary rounded-lg group-hover:bg-primary-light transition-colors">
-              <span className="text-primary-foreground font-extrabold text-lg tracking-tight">SR</span>
+            <div className="relative flex items-center justify-center w-12 h-12 bg-primary rounded-lg group-hover:bg-primary-light transition-colors">
+              <span className="font-extrabold text-2xl text-accent leading-none tracking-tighter">A<span className="text-primary-foreground text-base align-middle px-0.5">&amp;</span>C</span>
             </div>
-            <span className="text-base md:text-lg font-bold text-foreground tracking-tight leading-tight">
-              Sevilla<span className="text-primary">|</span>Rodríguez
-              <span className="block text-[10px] font-medium text-muted-foreground tracking-widest uppercase">Development</span>
+            <span className="text-sm md:text-base font-bold text-foreground tracking-tight leading-tight">
+              CONSTRUCTORA <span className="text-accent">A&amp;C</span>
+              <span className="block text-[10px] font-medium text-muted-foreground tracking-widest uppercase">
+                Consultoría y Construcción S.A.C.
+              </span>
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
-            {navItems.map((item) => (
+            {navItems.map((item) =>
               item.isRoute ? (
                 <Link
                   key={item.label}
                   to={item.href}
-                  className={`text-sm font-medium transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full ${
-                    isActive(item.href, item.isRoute) 
-                      ? "text-primary after:w-full" 
-                      : "text-muted-foreground hover:text-primary"
+                  className={`text-sm font-medium transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:h-0.5 after:bg-accent after:transition-all hover:after:w-full ${
+                    isActive(item.href, item.isRoute)
+                      ? "text-foreground after:w-full"
+                      : "text-muted-foreground hover:text-foreground after:w-0"
                   }`}
                 >
                   {item.label}
@@ -72,48 +65,39 @@ export const Header = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full"
+                  className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all hover:after:w-full"
                 >
                   {item.label}
                 </a>
               )
-            ))}
+            )}
           </nav>
 
-          {/* CTA Button */}
           <div className="hidden lg:block">
-            <Button variant="nav" size="lg">
+            <Button variant="nav" size="lg" className="bg-accent text-accent-foreground hover:bg-accent-light">
               Cotizar Proyecto
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             className="lg:hidden p-2 text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
+            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="lg:hidden py-4 border-t border-border animate-fade-in">
             <nav className="flex flex-col gap-4">
-              {navItems.map((item) => (
+              {navItems.map((item) =>
                 item.isRoute ? (
                   <Link
                     key={item.label}
                     to={item.href}
-                    className={`text-base font-medium transition-colors py-2 ${
-                      isActive(item.href, item.isRoute) 
-                        ? "text-primary" 
-                        : "text-muted-foreground hover:text-primary"
+                    className={`text-base font-medium py-2 ${
+                      isActive(item.href, item.isRoute) ? "text-accent" : "text-muted-foreground hover:text-foreground"
                     }`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -123,14 +107,14 @@ export const Header = () => {
                   <a
                     key={item.label}
                     href={item.href}
-                    className="text-base font-medium text-muted-foreground hover:text-primary transition-colors py-2"
+                    className="text-base font-medium text-muted-foreground hover:text-foreground py-2"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.label}
                   </a>
                 )
-              ))}
-              <Button variant="nav" size="lg" className="mt-4">
+              )}
+              <Button variant="nav" size="lg" className="mt-4 bg-accent text-accent-foreground hover:bg-accent-light">
                 Cotizar Proyecto
               </Button>
             </nav>
