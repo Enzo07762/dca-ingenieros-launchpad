@@ -6,51 +6,46 @@
 
 @layer base {
   :root {
-    /* Trust Blue - Corporate primary */
-    --primary: 215 85% 25%;
+    /* Constructora A&C — Carbon Black (primary) */
+    --primary: 0 0% 9%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 215 70% 45%;
-    --primary-dark: 215 90% 18%;
+    --primary-light: 0 0% 22%;
+    --primary-dark: 0 0% 4%;
 
-    /* Safety/Eco Green - Accent */
-    --accent: 152 60% 38%;
-    --accent-foreground: 0 0% 100%;
-    --accent-light: 152 55% 50%;
+    /* Constructora A&C — Signal Yellow (accent) */
+    --accent: 45 96% 53%;
+    --accent-foreground: 0 0% 9%;
+    --accent-light: 48 100% 65%;
 
     /* Backgrounds */
     --background: 0 0% 100%;
-    --foreground: 215 25% 15%;
+    --foreground: 0 0% 10%;
 
-    /* Cards & Surfaces */
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 15%;
+    --card-foreground: 0 0% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 15%;
+    --popover-foreground: 0 0% 10%;
 
-    /* Secondary - Light surfaces */
-    --secondary: 210 20% 96%;
-    --secondary-foreground: 215 25% 15%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 10%;
 
-    /* Muted - Subtle backgrounds */
-    --muted: 210 15% 94%;
-    --muted-foreground: 215 15% 45%;
+    --muted: 0 0% 94%;
+    --muted-foreground: 0 0% 40%;
 
     /* Destructive */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    /* Borders & Inputs */
-    --border: 214 20% 88%;
-    --input: 214 20% 88%;
-    --ring: 215 85% 25%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 45 96% 53%;
 
     --radius: 0.5rem;
 
-    /* Custom design tokens */
-    --hero-overlay: 215 50% 10%;
-    --section-gray: 210 10% 97%;
-    --trust-badge: 152 45% 92%;
+    --hero-overlay: 0 0% 5%;
+    --section-gray: 0 0% 97%;
+    --trust-badge: 45 90% 92%;
 
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 hsl(215 25% 15% / 0.05);
