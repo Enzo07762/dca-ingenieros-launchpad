@@ -1,143 +1,89 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { 
-  Shield, 
-  Award, 
-  Clock, 
-  Leaf, 
-  Target, 
-  Eye,
-  CheckCircle,
-  Building2,
-  TrendingUp,
-  BadgeCheck,
-  ArrowRight
+import {
+  Shield, Award, Clock, HardHat, Target, Eye, CheckCircle,
+  Building2, TrendingUp, BadgeCheck, ArrowRight,
 } from "lucide-react";
-import nosotrosHero from "@/assets/nosotros-hero.jpg";
-import nosotrosTeam from "@/assets/nosotros-team.jpg";
-import nosotrosMision from "@/assets/nosotros-mision.jpg";
+import nosotrosHero from "@/assets/ayc-hero-bg.jpg";
+import nosotrosTeam from "@/assets/ayc-office.png";
+import nosotrosMision from "@/assets/ayc-proj-edif.png";
 
 const valores = [
-  {
-    icon: Shield,
-    title: "Seguridad Integral",
-    description: "Priorizamos la integridad de nuestro equipo y clientes. Trabajamos bajo normativas estrictas de seguridad y salud en el trabajo (SST)."
-  },
-  {
-    icon: Award,
-    title: "Calidad Certificada",
-    description: "Procesos alineados a la norma ISO 9001:2015, garantizando durabilidad y excelencia técnica en cada obra."
-  },
-  {
-    icon: Clock,
-    title: "Cumplimiento y Puntualidad",
-    description: "Gestionamos los riesgos propios de proyectos especiales para entregar a tiempo, sin sacrificar la calidad pactada."
-  },
-  {
-    icon: Leaf,
-    title: "Desarrollo Sostenible",
-    description: "Generamos valor a accionistas, bienestar a trabajadores y desarrollo a las comunidades donde ejecutamos nuestras obras."
-  }
+  { icon: Shield, title: "Seguridad en Obra", description: "Aplicamos protocolos estrictos de SST en cada frente de trabajo, protegiendo a nuestro personal y a la comunidad." },
+  { icon: Award, title: "Calidad Técnica", description: "Procesos constructivos auditados, materiales certificados y profesionales colegiados en cada especialidad." },
+  { icon: Clock, title: "Cumplimiento de Plazos", description: "Planificamos con holgura realista para entregar siempre dentro del cronograma pactado." },
+  { icon: HardHat, title: "Compromiso Local", description: "Nacimos en Chiclayo y trabajamos con proveedores y mano de obra de la región." },
 ];
 
 const hitos = [
-  {
-    year: "1994",
-    title: "El Inicio",
-    description: "En marzo nace Sevilla|Rodríguez con una Oficina de Gestión de Proyectos y personal técnico en obra."
-  },
-  {
-    year: "2003",
-    title: "Expansión Industrial",
-    description: "Ampliamos cartera hacia plantas industriales para producción y almacenamiento a nivel nacional."
-  },
-  {
-    year: "2012",
-    title: "Consolidación",
-    description: "Homologación con clientes corporativos de primer nivel y participación en obras de minería, saneamiento e infraestructura deportiva."
-  },
-  {
-    year: "2024",
-    title: "Actualidad",
-    description: "Más de 30 años brindando respuestas simples a retos complejos en todo el Perú."
-  }
+  { year: "2014", title: "Fundación", description: "Constructora A&C nace en Chiclayo enfocada en consultoría y obra civil para entidades públicas." },
+  { year: "2017", title: "Registro OSCE", description: "Inscripción formal al Registro Nacional de Proveedores, ampliando alcance a licitaciones del Estado." },
+  { year: "2020", title: "Especialidades", description: "Consolidación de las 7 especialidades en supervisión, expedientes técnicos y ejecución." },
+  { year: "2025", title: "Hoy", description: "Más de una década entregando obra pública y privada, con capacidad de consorciarnos." },
 ];
 
 const Nosotros = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
-      {/* Hero Section - Airbrag Style */}
-      <section className="relative min-h-[60vh] bg-gradient-to-br from-primary via-primary to-primary-dark flex items-center pt-20">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PHBhdGggZD0iTTM2IDM0djItSDI0di0yaDEyek0zNiAzMHYySDI0di0yaDEyek0zNiAyNnYySDI0di0yaDEyeiIvPjwvZz48L2c+PC9zdmc+')] opacity-50" />
-        
+
+      {/* Hero */}
+      <section className="relative min-h-[60vh] bg-primary-dark flex items-center pt-20 overflow-hidden">
+        <div className="absolute inset-0 opacity-30">
+          <img src={nosotrosHero} alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-dark via-primary-dark/95 to-primary/80" />
+
         <div className="section-container relative z-10 text-center py-20">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-full mb-8 animate-fade-in">
-            <BadgeCheck className="w-4 h-4 text-accent-light" />
-            <span className="text-sm font-medium text-primary-foreground">
-              Empresa peruana desde marzo de 1994
-            </span>
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent/15 backdrop-blur-sm border border-accent/30 rounded-full mb-8 animate-fade-in">
+            <BadgeCheck className="w-4 h-4 text-accent" />
+            <span className="text-sm font-medium text-primary-foreground">Empresa chiclayana desde 2014</span>
           </div>
-          
-          {/* Main Title */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 animate-slide-up leading-tight">
-            Nuestra Historia.
+            Nuestra historia.
             <br />
-            <span className="text-accent-light">Construyendo el Perú desde 1994.</span>
+            <span className="text-accent">Construyendo el norte del Perú.</span>
           </h1>
-          
-          {/* Subtitle */}
-          <p className="text-lg md:text-xl text-primary-foreground/80 max-w-3xl mx-auto animate-slide-up" style={{ animationDelay: '0.1s' }}>
-            Sevilla|Rodríguez Development es una empresa orgullosa de ser peruana, creada con la motivación de
-            <strong className="text-primary-foreground"> marcar la diferencia en el sector de la construcción.</strong>
+          <p className="text-lg md:text-xl text-primary-foreground/75 max-w-3xl mx-auto animate-slide-up">
+            Constructora A&amp;C — Consultoría y Construcción S.A.C. es una empresa peruana
+            orgullosa de su origen norteño, con el compromiso de
+            <strong className="text-primary-foreground"> elevar el estándar técnico de la construcción regional</strong>.
           </p>
         </div>
       </section>
 
-      {/* Nuestra Esencia - Split Section */}
+      {/* Quiénes Somos */}
       <section className="section-padding bg-background">
         <div className="section-container">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            {/* Text Content */}
             <div className="animate-slide-in-left">
-              <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-4 block">
-                ¿Quiénes Somos?
-              </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                El mejor talento humano en obra
-              </h2>
+              <span className="text-accent-foreground bg-accent px-3 py-1 rounded-full font-semibold text-xs uppercase tracking-wider mb-4 inline-block">¿Quiénes Somos?</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Equipo técnico con vocación de obra</h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                Desde el inicio de las operaciones, <strong className="text-foreground">Sevilla|Rodríguez</strong> se esfuerza
-                por reclutar el mejor talento humano, logrando un equipo de profesionales con dominio técnico
-                altamente comprometido con nuestros principios y las necesidades de nuestros clientes.
+                Desde nuestros inicios en <strong className="text-foreground">Chiclayo</strong>, hemos reunido a ingenieros
+                civiles, arquitectos y técnicos colegiados con experiencia en obra pública,
+                privada y consorcios. Cada proyecto se ejecuta con un residente y un supervisor
+                a tiempo completo.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Nuestra experiencia sigue creciendo gracias a la edificación de obras de diseño único en
-                <strong className="text-foreground"> comercio, salud, educación, infraestructura deportiva, vivienda</strong> y
-                especialmente <strong className="text-foreground">plantas industriales</strong> para producción y almacenamiento.
+                Atendemos a <strong className="text-foreground">entidades del Estado, empresas privadas y personas
+                naturales</strong>, abarcando desde la formulación del perfil técnico hasta la
+                ejecución integral de la obra.
               </p>
             </div>
-            
-            {/* Image with Badge */}
+
             <div className="relative animate-slide-in-right">
-              <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                <img 
-                  src={nosotrosTeam} 
-                  alt="Equipo Sevilla Rodríguez Development" 
-                  className="w-full h-[400px] object-cover"
-                />
+              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-border">
+                <img src={nosotrosTeam} alt="Oficina Constructora A&C" className="w-full h-[400px] object-cover" />
               </div>
-              {/* Certification Badge Overlay */}
-              <div className="absolute -bottom-6 right-4 md:right-8 bg-primary text-primary-foreground px-6 py-4 rounded-xl shadow-lg flex items-center gap-3">
-                <div className="p-2 bg-primary-foreground/20 rounded-full">
-                  <CheckCircle className="w-5 h-5 text-accent-light" />
+              <div className="absolute -bottom-6 right-4 md:right-8 bg-accent text-accent-foreground px-6 py-4 rounded-xl shadow-lg flex items-center gap-3">
+                <div className="p-2 bg-primary rounded-full">
+                  <CheckCircle className="w-5 h-5 text-accent" />
                 </div>
                 <div>
-                  <p className="font-semibold text-sm">Certificación de Calidad</p>
-                  <p className="text-xs text-primary-foreground/80">ISO 9001:2015</p>
+                  <p className="font-bold text-sm">Registrados en OSCE</p>
+                  <p className="text-xs opacity-80">RNP vigente · Consorciables</p>
                 </div>
               </div>
             </div>
@@ -145,48 +91,40 @@ const Nosotros = () => {
         </div>
       </section>
 
-      {/* Misión y Visión - Cards with Image */}
+      {/* Misión y Visión */}
       <section className="section-padding bg-secondary">
         <div className="section-container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Image */}
             <div className="relative order-2 lg:order-1 animate-slide-in-left">
-              <div className="rounded-2xl overflow-hidden shadow-xl">
-                <img 
-                  src={nosotrosMision} 
-                  alt="Equipo Sevilla Rodríguez en obra" 
-                  className="w-full h-[420px] object-cover"
-                />
+              <div className="rounded-2xl overflow-hidden shadow-xl border border-border">
+                <img src={nosotrosMision} alt="Obra en ejecución" className="w-full h-[420px] object-cover" />
               </div>
             </div>
-            
-            {/* Cards */}
+
             <div className="space-y-6 order-1 lg:order-2 animate-slide-in-right">
-              {/* Mission Card */}
-              <div className="bg-card rounded-2xl p-8 shadow-md border border-border hover:shadow-lg transition-shadow">
+              <div className="bg-card rounded-2xl p-8 shadow-md border border-border hover:border-accent/40 transition-colors">
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-primary/10 rounded-xl">
-                    <Target className="w-6 h-6 text-primary" />
-                  </div>
+                  <div className="p-3 bg-accent rounded-xl"><Target className="w-6 h-6 text-accent-foreground" /></div>
                   <div>
                     <h3 className="text-xl font-bold text-foreground mb-3">Misión</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Ejecutar <strong className="text-foreground">proyectos especiales de construcción</strong> a nivel nacional, utilizando las mejores prácticas en la gerencia de proyectos y brindando a nuestros clientes soluciones eficientes que generen valor a accionistas, trabajadores y comunidades.
+                      Brindar <strong className="text-foreground">soluciones integrales de ingeniería y construcción</strong>
+                      en el norte del Perú, generando obras seguras, eficientes y rentables para
+                      nuestros clientes, con un equipo técnico comprometido y proveedores locales.
                     </p>
                   </div>
                 </div>
               </div>
-              
-              {/* Vision Card */}
-              <div className="bg-card rounded-2xl p-8 shadow-md border border-border hover:shadow-lg transition-shadow">
+
+              <div className="bg-primary rounded-2xl p-8 shadow-md border border-primary text-primary-foreground">
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-accent/10 rounded-xl">
-                    <Eye className="w-6 h-6 text-accent" />
-                  </div>
+                  <div className="p-3 bg-accent rounded-xl"><Eye className="w-6 h-6 text-accent-foreground" /></div>
                   <div>
-                    <h3 className="text-xl font-bold text-foreground mb-3">Visión</h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Ser la <strong className="text-foreground">empresa líder</strong> en la construcción de proyectos no convencionales y de diseño específico en el país.
+                    <h3 className="text-xl font-bold mb-3">Visión</h3>
+                    <p className="text-primary-foreground/80 leading-relaxed">
+                      Ser la <strong className="text-accent">constructora de referencia</strong> en el norte del país
+                      para proyectos de inversión pública y privada, reconocidos por la calidad,
+                      el cumplimiento y la transparencia en cada obra.
                     </p>
                   </div>
                 </div>
@@ -196,152 +134,63 @@ const Nosotros = () => {
         </div>
       </section>
 
-      {/* Nuestros Pilares (Valores) - Grid */}
+      {/* Pilares */}
       <section className="section-padding bg-background">
         <div className="section-container">
-          {/* Section Header */}
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-4 block">
-              Lo Que Nos Define
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              Nuestros Pilares
-            </h2>
+            <span className="text-accent-foreground bg-accent px-3 py-1 rounded-full font-semibold text-xs uppercase tracking-wider mb-4 inline-block">Lo que nos define</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">Nuestros Pilares</h2>
           </div>
-          
-          {/* Values Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {valores.map((valor, index) => (
-              <div 
-                key={valor.title}
-                className="bg-card rounded-2xl p-6 border border-border hover:shadow-lg hover:border-primary/20 transition-all duration-300 group"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="p-3 bg-primary/10 rounded-xl w-fit mb-5 group-hover:bg-primary/20 transition-colors">
-                  <valor.icon className="w-6 h-6 text-primary" />
+            {valores.map((v) => (
+              <div key={v.title} className="bg-card rounded-2xl p-6 border border-border hover:border-accent hover:shadow-lg transition-all group">
+                <div className="p-3 bg-accent rounded-xl w-fit mb-5 group-hover:scale-110 transition-transform">
+                  <v.icon className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h3 className="text-lg font-bold text-foreground mb-3">{valor.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{valor.description}</p>
+                <h3 className="text-lg font-bold text-foreground mb-3">{v.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{v.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Timeline Section - Blue Background */}
-      <section className="section-padding bg-gradient-to-br from-primary via-primary to-primary-dark relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PHBhdGggZD0iTTM2IDM0djItSDI0di0yaDEyek0zNiAzMHYySDI0di0yaDEyek0zNiAyNnYySDI0di0yaDEyeiIvPjwvZz48L2c+PC9zdmc+')] opacity-50" />
-        
+      {/* Timeline */}
+      <section className="section-padding bg-primary-dark relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, hsl(var(--accent)) 1px, transparent 0)", backgroundSize: "32px 32px" }} />
         <div className="section-container relative z-10">
-          {/* Section Header */}
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-accent-light font-semibold text-sm uppercase tracking-wider mb-4 block">
-              Nuestra Trayectoria
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground">
-              Años de Crecimiento y Evolución
-            </h2>
+            <span className="text-accent font-semibold text-xs uppercase tracking-[0.2em] mb-4 block">Nuestra trayectoria</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground">Una década construyendo confianza</h2>
           </div>
-          
-          {/* Timeline Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {hitos.map((hito, index) => (
-              <div 
-                key={hito.year}
-                className="relative bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-6 border border-primary-foreground/20 hover:bg-primary-foreground/15 transition-all"
-              >
-                {/* Year Badge */}
-                <div className="absolute -top-3 left-6 px-4 py-1 bg-accent text-accent-foreground text-sm font-bold rounded-full">
-                  {hito.year}
+            {hitos.map((h, i) => (
+              <div key={h.year} className="relative bg-primary-foreground/[0.04] backdrop-blur-sm rounded-2xl p-6 border border-primary-foreground/10 hover:border-accent/40 transition-colors">
+                <div className="absolute -top-3 left-6 px-4 py-1 bg-accent text-accent-foreground text-sm font-bold rounded-full">{h.year}</div>
+                <div className="p-3 bg-accent rounded-xl w-fit mb-4 mt-2">
+                  {i === 0 && <Building2 className="w-5 h-5 text-accent-foreground" />}
+                  {i === 1 && <BadgeCheck className="w-5 h-5 text-accent-foreground" />}
+                  {i === 2 && <Award className="w-5 h-5 text-accent-foreground" />}
+                  {i === 3 && <TrendingUp className="w-5 h-5 text-accent-foreground" />}
                 </div>
-                
-                {/* Icon */}
-                <div className="p-3 bg-primary-foreground/20 rounded-xl w-fit mb-4 mt-2">
-                  {index === 0 && <Building2 className="w-5 h-5 text-accent-light" />}
-                  {index === 1 && <TrendingUp className="w-5 h-5 text-accent-light" />}
-                  {index === 2 && <Award className="w-5 h-5 text-accent-light" />}
-                  {index === 3 && <BadgeCheck className="w-5 h-5 text-accent-light" />}
-                </div>
-                
-                <h3 className="text-lg font-bold text-primary-foreground mb-2">{hito.title}</h3>
-                <p className="text-primary-foreground/80 text-sm leading-relaxed">{hito.description}</p>
+                <h3 className="text-lg font-bold text-primary-foreground mb-2">{h.title}</h3>
+                <p className="text-primary-foreground/70 text-sm leading-relaxed">{h.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Certificaciones Section */}
-      <section className="section-padding bg-section-gray">
-        <div className="section-container">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Text Content */}
-            <div>
-              <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-4 block">
-                Nuestro Respaldo
-              </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Respaldo que genera confianza
-              </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                Nuestros procesos están alineados a estándares internacionales de calidad,
-                garantizando excelencia en cada entrega:
-              </p>
-              
-              <div className="space-y-4">
-                <div className="flex items-center gap-4 p-4 bg-card rounded-xl border border-border">
-                  <div className="p-2 bg-primary/10 rounded-lg">
-                    <CheckCircle className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-foreground">ISO 9001:2015</p>
-                    <p className="text-sm text-muted-foreground">Sistema de Gestión de Calidad</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4 p-4 bg-card rounded-xl border border-border">
-                  <div className="p-2 bg-accent/10 rounded-lg">
-                    <CheckCircle className="w-5 h-5 text-accent" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-foreground">+30 años de trayectoria</p>
-                    <p className="text-sm text-muted-foreground">Empresa peruana fundada en 1994</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Image */}
-            <div className="relative">
-              <div className="rounded-2xl overflow-hidden shadow-xl">
-                <img 
-                  src={nosotrosHero} 
-                  alt="Proyecto de construcción Sevilla Rodríguez" 
-                  className="w-full h-[400px] object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
+      {/* CTA */}
       <section className="section-padding bg-background">
         <div className="section-container">
-          <div className="bg-gradient-to-br from-primary via-primary to-primary-dark rounded-3xl p-10 md:p-16 text-center relative overflow-hidden">
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djItSDI0di0yaDEyek0zNiAzMHYySDI0di0yaDEyek0zNiAyNnYySDI0di0yaDEyeiIvPjwvZz48L2c+PC9zdmc+')] opacity-50" />
-            
+          <div className="bg-accent rounded-3xl p-10 md:p-16 text-center relative overflow-hidden">
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-                ¿Listo para iniciar su próximo proyecto?
-              </h2>
-              <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto mb-8">
-                Deje la ingeniería en manos de expertos. Hagamos realidad su visión con los 
-                <strong className="text-primary-foreground"> estándares que su empresa merece</strong>.
+              <h2 className="text-3xl md:text-4xl font-bold text-accent-foreground mb-4">¿Tiene un proyecto en mente?</h2>
+              <p className="text-lg text-accent-foreground/80 max-w-2xl mx-auto mb-8">
+                Conversemos sobre su próximo expediente técnico, supervisión u obra civil.
               </p>
-              <Button 
-                size="lg" 
-                className="bg-accent hover:bg-accent-light text-accent-foreground font-semibold px-8 py-6 text-base rounded-xl shadow-lg hover:shadow-xl transition-all"
-              >
+              <Button size="lg" className="bg-primary hover:bg-primary-light text-primary-foreground font-semibold px-8 py-6 rounded-xl shadow-lg">
                 Cotizar con un Ingeniero
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
